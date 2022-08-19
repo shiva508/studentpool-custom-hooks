@@ -1,10 +1,13 @@
 import React from "react";
-import SimpleInput from "../components/SimpleInput.js";
+import BasicForm from "../components/BasicForm";
+import SimpleInput from "../components/SimpleInput";
+import SimpleInputHooks from "../components/SimpleInputHooks";
 
 const FormsContainer = () => {
   return (
     <div className="app">
-      <SimpleInput />
+      {/* <SimpleInputHooks /> */}
+      <BasicForm />
     </div>
   );
 };
