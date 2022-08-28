@@ -3,6 +3,7 @@ import ForwardBackwordContainer from "./counterapp/Containers/ForwardBackwordCon
 import TaskContainer from "./taskapp/containers/TaskContainer";
 import FormsContainer from "./basicformapp/container/FormsContainer";
 import MealsContainer from "./foodapp/containers/MealsContainer";
+import ReactReducContainer from "./reactreduxapp/containers/ReactReducContainer";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <ForwardBackwordContainer /> */}
       {/* <TaskContainer></TaskContainer> */}
       {/* <FormsContainer /> */}
-      <MealsContainer />
+      {/* <MealsContainer /> */}
+      <ReactReducContainer />
     </Fragment>
   );
 }
