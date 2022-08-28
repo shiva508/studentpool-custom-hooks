@@ -6,31 +6,27 @@ import { authActions } from "../store/react-redux-toolkit";
 const Auth = () => {
   const inputUsernameRef = useRef();
   const dispatch = useDispatch();
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-  console.log(isAuthenticated);
   const authenticationHandler = (event) => {
     event.preventDefault();
     const inputUsername = inputUsernameRef.current.value;
     dispatch(authActions.login(inputUsername));
   };
   return (
-    !isAuthenticated && (
-      <main className={classes.auth}>
-        <section>
-          <form onSubmit={authenticationHandler}>
-            <div className={classes.control}>
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" ref={inputUsernameRef} />
-            </div>
-            <div className={classes.control}>
-              <label htmlFor="password">Password</label>
-              <input type="password" id="password" />
-            </div>
-            <button>Login</button>
-          </form>
-        </section>
-      </main>
-    )
+    <main className={classes.auth}>
+      <section>
+        <form onSubmit={authenticationHandler}>
+          <div className={classes.control}>
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" ref={inputUsernameRef} />
+          </div>
+          <div className={classes.control}>
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" />
+          </div>
+          <button>Login</button>
+        </form>
+      </section>
+    </main>
   );
 };
 export default Auth;

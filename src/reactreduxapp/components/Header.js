@@ -1,13 +1,13 @@
 import classes from "./Header.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { authActions } from "../store/react-redux-toolkit";
+import { authActions } from "../store/auth-slice";
+// import { authActions } from "../store/react-redux-toolkit";
 import { Fragment } from "react";
 
 const Header = () => {
   const dispatch = useDispatch();
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const username = useSelector((state) => state.auth.userdetails.username);
-  console.log(username);
   const logoutHandler = () => {
     dispatch(authActions.logout());
   };
