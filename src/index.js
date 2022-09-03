@@ -7,12 +7,7 @@ import { Provider } from "react-redux";
 import store from "./reactreduxapp/store/react-redux";
 import toolkitstore from "./reactreduxapp/store/react-redux-toolkit";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  // <Provider store={store}>
-  <Provider store={toolkitstore}>
-    <App />
-  </Provider>
-);
+root.render(<App />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
