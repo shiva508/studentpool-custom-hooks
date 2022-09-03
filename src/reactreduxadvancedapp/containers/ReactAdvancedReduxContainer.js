@@ -28,7 +28,7 @@ const ReactAdvancedReduxContainer = () => {
     );
     axios
       .put(
-        "https://tasks-a49eb-default-rtdb.asia-southeast1.firebasedatabase.app",
+        "https://tasks-a49eb-default-rtdb.asia-southeast1.firebasedatabase.app/cart.json",
         cart
       )
       .then((res) => {
