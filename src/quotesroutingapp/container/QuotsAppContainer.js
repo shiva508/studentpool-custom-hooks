@@ -4,6 +4,7 @@ import Layout from "../components/layout/Layout";
 import MainNavigation from "../components/layout/MainNavigation";
 import AllQuotes from "../components/pages/AllQuotes";
 import NewQuote from "../components/pages/NewQuote";
+import NotFound from "../components/pages/NotFound";
 import QuoteDetail from "../components/pages/QuoteDetail";
 
 const QuotsAppContainer = () => {
@@ -21,6 +22,9 @@ const QuotsAppContainer = () => {
         </Route>
         <Route path="/new-quote">
           <NewQuote></NewQuote>
+        </Route>
+        <Route path="*">
+          <NotFound></NotFound>
         </Route>
       </Switch>
     </Layout>
